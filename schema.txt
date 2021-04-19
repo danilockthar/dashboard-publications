@@ -1,0 +1,52 @@
+type User {
+   name: String!
+   email: String! @unique
+   role: Role!
+   authId: String! @unique
+   posts: [Post] @relation
+}
+
+type Blocks @embedded {
+  type: String!
+  data: Data
+}
+type Data @embedded {
+  url: String
+  stretched: Boolean
+  text: String
+  code: String
+  file: Image
+  withBackground: Boolean
+  caption: String
+  withBorder: Boolean
+  level: Int
+  style: String
+  items: [String]
+}
+type Image @embedded{
+  url: String
+}
+type Post {
+  author: User!
+  created_at: Date
+  updated_at: Date
+  excerpt: String!
+  tags: [Tag]
+  slug: String!
+  show: Boolean
+  content: [Blocks]
+  title: String!
+}
+type Tag @embedded{
+  tag: String!
+}
+enum Role {
+   ADMIN
+   USER
+   AUTHOR
+}
+type Query {
+   allUsers: [User!]
+   userByAuthId(authId: String!):User
+   postBySlug(slug: String!): Post
+}

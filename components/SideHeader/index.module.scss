@@ -1,0 +1,25 @@
+.sideHeader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  padding: 0 2vw 0 2vw;
+  width: 15vw;
+  box-sizing: border-box;
+  // border-right: 1px solid #5a5a5a21;
+  .menu {
+    display: grid;
+    padding: 8vh 0vw 0 1vw;
+    box-sizing: border-box;
+    a {
+      cursor: pointer;
+      color: white;
+      font-family: "Open Sans", sans-serif;
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      align-items: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+  }
+}

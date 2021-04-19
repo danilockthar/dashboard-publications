@@ -1,0 +1,27 @@
+.header {
+  height: 10vh;
+  background: black;
+  position: fixed;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 2vw 0 2vw;
+  width: 100%;
+  h1 {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+  }
+}
+.menu {
+  display: grid;
+  width: 20vw;
+  grid-template-columns: 1fr 1fr;
+  justify-self: right;
+  align-items: center;
+  a {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+  }
+}
