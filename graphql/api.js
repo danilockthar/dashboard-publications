@@ -28,7 +28,7 @@ export const createAnUser = async (email, name, authId) => {
   const res = await fetch("https://graphql.fauna.com/graphql", {
     method: "POST",
     headers: {
-      Authorization: `Bearer fnAEGkJWwtACA27bZSDz16uh1nUkL8oCTJPTdgHZ`,
+      Authorization: `Bearer ${process.env.BEARER_TOKEN}`,
       "Content-type": "application/json",
       Accept: "application/json",
     },
@@ -85,7 +85,7 @@ export const createOnePost = async (
   const res = await fetch("https://graphql.fauna.com/graphql", {
     method: "POST",
     headers: {
-      Authorization: `Bearer fnAEGkJWwtACA27bZSDz16uh1nUkL8oCTJPTdgHZ`,
+      Authorization: `Bearer ${process.env.BEARER_TOKEN}`,
       "Content-type": "application/json",
       Accept: "application/json",
     },
